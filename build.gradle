@@ -1,0 +1,23 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+}
+
+apply plugin: 'kotlin-kapt'
+
+group 'com.ktHat'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+kapt {
+    useBuildCache = true
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "com.squareup.moshi:moshi-kotlin:1.13.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1"
+}
